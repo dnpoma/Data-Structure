@@ -1,0 +1,5 @@
+﻿     Creando biblioteca C:\Users\DELL\source\repos\Homework_8_Pascal_Triangle\x64\Debug\UnitTest.lib y objeto C:\Users\DELL\source\repos\Homework_8_Pascal_Triangle\x64\Debug\UnitTest.exp
+UnitTest.obj : error LNK2019: símbolo externo "public: __cdecl Matrix::~Matrix(void)" (??1Matrix@@QEAA@XZ) sin resolver al que se hace referencia en la función "public: void __cdecl UnitTest::UnitTest::matrix(void)" (?matrix@UnitTest@1@QEAAXXZ)
+UnitTest.obj : error LNK2019: símbolo externo "public: int __cdecl Matrix::get_dimension(void)" (?get_dimension@Matrix@@QEAAHXZ) sin resolver al que se hace referencia en la función "public: void __cdecl UnitTest::UnitTest::matrix(void)" (?matrix@UnitTest@1@QEAAXXZ)
+UnitTest.obj : error LNK2019: símbolo externo "public: void __cdecl Matrix::set_dimension(int)" (?set_dimension@Matrix@@QEAAXH@Z) sin resolver al que se hace referencia en la función "public: void __cdecl UnitTest::UnitTest::matrix(void)" (?matrix@UnitTest@1@QEAAXXZ)
+C:\Users\DELL\source\repos\Homework_8_Pascal_Triangle\x64\Debug\UnitTest.dll : fatal error LNK1120: 3 externos sin resolver

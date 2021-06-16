@@ -1,0 +1,33 @@
+﻿  Homework_2.cpp
+C:\Users\DELL\source\repos\Homework_2\Homework_2\Operations.h(80,12): warning C4244: 'return': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=int
+          ]
+C:\Users\DELL\source\repos\Homework_2\Homework_2\Operations.h(79): message : al compilar la función del miembro clase plantilla "T Operations<T>::operator &(Data<T> &)"
+          with
+          [
+              T=int
+          ]
+C:\Users\DELL\source\repos\Homework_2\Homework_2\Homework_2.cpp(53): message : Vea la referencia a la creación de una instancia de la función plantilla "T Operations<T>::operator &(Data<T> &)" que se está compilando
+          with
+          [
+              T=int
+          ]
+C:\Users\DELL\source\repos\Homework_2\Homework_2\Homework_2.cpp(22): message : Vea la referencia a la creación de una instancia de clase plantilla "Operations<int>" que se está compilando
+C:\Users\DELL\source\repos\Homework_2\Homework_2\Operations.h(127,13): warning C4244: 'return': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=int
+          ]
+C:\Users\DELL\source\repos\Homework_2\Homework_2\Operations.h(126): message : al compilar la función del miembro clase plantilla "T Operations<T>::operator -(Data<T> &)"
+          with
+          [
+              T=int
+          ]
+C:\Users\DELL\source\repos\Homework_2\Homework_2\Homework_2.cpp(45): message : Vea la referencia a la creación de una instancia de la función plantilla "T Operations<T>::operator -(Data<T> &)" que se está compilando
+          with
+          [
+              T=int
+          ]
+  Homework_2.vcxproj -> C:\Users\DELL\source\repos\Homework_2\Debug\Homework_2.exe
