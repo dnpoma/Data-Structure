@@ -68,7 +68,7 @@ void Operation::generate_encryption(Person* persona, int value) {
 	std::string encryption;
 	int id = stoi(persona->get_id());
 	//std::cout << id << std::endl;
-	int new_id[11], caculator=0, rest = 0;
+	int new_id[11], operation[2], caculator=0, rest = 0;
 	int* data = data_expand(id, new_id);
 	for (int s = 10 - 1; s >= 0; s--) {
 		caculator = *(data+s) + value;
@@ -78,8 +78,7 @@ void Operation::generate_encryption(Person* persona, int value) {
 		else {
 
 			if (caculator > 9) {
-				rest = caculator - value;
-				encryption += std::to_string(rest);
+				encryption += std::to_string(plus(caculator, operation, 2));
 			}
 			else {
 				encryption += std::to_string(caculator);
@@ -280,15 +279,10 @@ int Operation::input_number(int value) {
 	return number;
 }
 
-int Operation::plus_id(Person* person, int id[11]) {
-	int number = stoi(person->get_id());
+int Operation::plus(int number, int id[11], int size) {
 	int* data = data_expand(number, id);
-	//int i = (sizeof(data) / sizeof(data[0])) + 1;
-	//cout << i;
 	int sum = 0;
-	//cout << "i " << "data[s]" << " data[j]" << "number" << endl;
-	for (int s = 9 - 1; s >= 0; s--) {
-		//cout << data[s] << endl;
+	for (int s = size - 1; s >= 0; s--) {
 		sum += data[s];
 	}
 	return sum;

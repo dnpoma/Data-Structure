@@ -41,7 +41,7 @@ int main()
 		//cout << person.get_email();
 
 		int  id[11], encryption;
-		cout << "\nSuma cedula: "<< operation.plus_id(&person, id);
+		cout << "\nSuma cedula: "<< operation.plus(stoi(person.get_id()), id, 9);
 		//cout << "\nIngrese un número de encriptacion: ";
 		std::cout << std::endl;
 		encryption = operation.input_number(1);

@@ -18,5 +18,5 @@ public:
 	int* data_expand(int, int[]);
 	int digits(int number);
 	void enter_ID(char*);
-	int plus_id(Person* persona, int[]);
+	int plus(int number, int[], int);
 };
