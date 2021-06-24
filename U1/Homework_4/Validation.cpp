@@ -7,7 +7,7 @@
 using namespace std;
 
 void Validation::natural_numbers(char* character) {
-    int i = 0, number_character = 2;
+    int i = 0, number_character = 4;
     char key;
     character[0] = '\0';
     do {

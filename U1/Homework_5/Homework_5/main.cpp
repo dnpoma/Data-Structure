@@ -14,6 +14,7 @@ int main(int argc, char** argv) {
 	//lst.delete_first();
 
 	lst.delete_last();
+	lst.modified();
 
 	lst.print([](int valor, int indice) {
 		std::cout << "Indice:  " << indice+1 << "  valor " << valor << std::endl;

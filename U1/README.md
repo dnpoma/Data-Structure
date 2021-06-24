@@ -142,7 +142,7 @@ Es cuando una función se inboca así misma
 #
 
 ## 7. Listas Simples
-
+Listas con TDA. [here](./Homework_4).
 
 
 
@@ -150,7 +150,7 @@ Es cuando una función se inboca así misma
 
 ## 8. Listas Dobles
 
-
+Listas dobles con TDA. [here](./Homework_5).
 
 
 

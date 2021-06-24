@@ -15,6 +15,7 @@ public:
 	void delete_element(T);
 	void delete_first();
 	void delete_last();
+	void modified();
 	bool empty();
 	//~Linked_list();
 private:
@@ -86,18 +87,34 @@ void Doubly_linked_list<T>::delete_first() {
 	first->set_last(0);
 }
 
+//template <class T>
+//void Doubly_linked_list<T>::delete_last() {
+//	Nodo<T>* tmp;
+//	if (last() == nullptr)
+//		return;
+//	else {
+//		tmp = last();
+//		last()->set_last(last()->get_next());
+//		last() = last()->get_last();
+//	}
+//}
+//
+
 template <class T>
 void Doubly_linked_list<T>::delete_last() {
-	Nodo<T>* tmp;
-	if (last() == nullptr)
-		return;
-	else {
-		tmp = last();
-		last()->set_last(last()->get_next());
-		last() = last()->get_last();
+	Nodo<T>* actual = this->first;
+	Nodo<T>* last = first;
+	if (first != nullptr) {
+		while (actual != nullptr) {
+			if (actual == last) {
+				last->set_next(nullptr);
+				last() = last;
+			}
+			last = actual;
+			actual = actual->get_next();
+		}
 	}
 }
-
 
 template <class T>
 void Doubly_linked_list<T>::print(std::function<void(int, int)>callback) {
@@ -116,4 +133,38 @@ Nodo<T>* Doubly_linked_list<T>::last() {
 		tmp = tmp->get_next();
 	}
 	return tmp;
+}
+
+template <class T>
+void Doubly_linked_list<T>::modified() {
+	Nodo<T>* tmp = first;
+	bool find = false;
+	int nodo_search = 0;
+	int number;
+	cout << " Ingrese el dato del nodo a Buscar para Modificar: ";
+	cin >> nodo_search;
+	if (first != NULL) {
+		do {
+
+			if (tmp->get_data() == nodo_search) {
+				cout << "\n Nodo con el dato ( " << nodo_search << " ) Encontrado";
+				cout << "\n Ingrese el nuevo dato para este Nodo: ";
+				cin >> number;
+				tmp->set_data(number);
+				tmp->get_data();
+				cout << "\n Nodo Modificado\n\n";
+				find = true;
+			}
+
+			tmp = tmp->get_next();
+
+		} while (tmp != nullptr && find != true);
+
+		if (!find) {
+			cout << "\n Nodo no Encontrado\n\n";
+		}
+	}
+	else {
+		cout << "\n La lista se Encuentra Vacia\n\n";
+	}
 }

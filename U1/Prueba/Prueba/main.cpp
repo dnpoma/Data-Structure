@@ -1,13 +1,15 @@
 #include "Menu.h"
 #include "Operation.h"
 #include <iostream>
+#include "Person.h"
 int* data_expand(int, int[]);
 int input_numbers(int);
 void comparation(int, Doubly_linked_list<int>);
 
 int main(int argc, char** argv) {
 	Operation op;
-	Doubly_linked_list<int> lst;
+	Person person;
+	Doubly_linked_list <person> lst;
 	//lst.insert_start(2);
 	//lst.insert_start(4);
 	//lst.insert_start(3);

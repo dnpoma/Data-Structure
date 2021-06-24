@@ -59,6 +59,7 @@ void Menu::menu_principal() {
 		case 3:
 			system("cls");
 			std::cout << "Imprimir ";
+			cout << "\n";
 			lst.print();
 			cout << "\n";
 			system("pause");
