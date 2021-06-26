@@ -9,7 +9,7 @@ void comparation(int, Doubly_linked_list<int>);
 int main(int argc, char** argv) {
 	Operation op;
 	Person person;
-	Doubly_linked_list <person> lst;
+	Doubly_linked_list<int> lst;
 	//lst.insert_start(2);
 	//lst.insert_start(4);
 	//lst.insert_start(3);
@@ -22,19 +22,16 @@ int main(int argc, char** argv) {
 	int number;
 	do {
 		number = op.input_numbers(3);
-		lst.insert_end(number);
 		std::cout << "\n El numero se almaceno correctamente en la lista :)" << std::endl;
 		std::cout << "Desea ingresar otro dato [S/N]: ";
 		//cin >> respuesta;
-		cin.get(respuesta);
+		std::cin.get(respuesta);
 
-		cin.clear(); // unset failbit
-		cin.ignore(numeric_limits<streamsize>::max(), '\n'); // skip bad input 
-		if (respuesta == 'N') {
-			lst.insert_end(number);
-		}
+		std::cin.clear(); // unset failbit
+		//std::cin.ignore(numeric_limits<streamsize>::max(), '\n'); // skip bad input 
+		
+		lst.insert_end(number);
 	} while (respuesta != 'N');
-
 	lst.print();
 
 
