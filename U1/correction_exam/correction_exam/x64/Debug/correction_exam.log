@@ -1,9 +1,1 @@
-﻿  Doubly_linked_list.cpp
-  Operation.cpp
-  correction_exam.cpp
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\correction_exam\correction_exam\correction_exam.cpp(10,13): warning C4101: 'validation': variable local sin referencia
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\correction_exam\correction_exam\correction_exam.cpp(18,6): warning C4101: 'number': variable local sin referencia
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\correction_exam\correction_exam\correction_exam.cpp(20,36): warning C4101: 'apellido_B': variable local sin referencia
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\correction_exam\correction_exam\correction_exam.cpp(20,22): warning C4101: 'nombre_A': variable local sin referencia
-  Generando código...
-  correction_exam.vcxproj -> C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\correction_exam\x64\Debug\correction_exam.exe
+﻿  correction_exam.vcxproj -> C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\correction_exam\x64\Debug\correction_exam.exe
