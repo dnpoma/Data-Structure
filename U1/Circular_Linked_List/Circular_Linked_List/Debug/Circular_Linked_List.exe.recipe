@@ -2,7 +2,11 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+<<<<<<< HEAD
       <FullPath>C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Circular_Linked_List\Debug\Circular_Linked_List.exe</FullPath>
+=======
+      <FullPath>C:\Users\nicol\source\repos\Circular_Linked_List\Debug\Circular_Linked_List.exe</FullPath>
+>>>>>>> dfaa8c268a6a9fca6c41a57574a08c77633f9672
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

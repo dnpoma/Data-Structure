@@ -2,7 +2,10 @@
 #include "Operation.h"
 #include <iostream>
 #include <limits>
+<<<<<<< HEAD
 
+=======
+>>>>>>> dfaa8c268a6a9fca6c41a57574a08c77633f9672
 #include "Person.h"
 
 int main(int argc, char** argv) {

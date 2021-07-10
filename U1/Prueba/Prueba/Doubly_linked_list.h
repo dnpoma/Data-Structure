@@ -21,8 +21,13 @@ public:
 	void modified_change(T);
 	T search(T);
 	void empty();
+<<<<<<< HEAD
 	//void print();
 	//~Linked_list();
+=======
+		//void print();
+		//~Linked_list();
+>>>>>>> dfaa8c268a6a9fca6c41a57574a08c77633f9672
 private:
 	Nodo<T>* first = nullptr;
 	Nodo<T>* last();
@@ -101,6 +106,7 @@ template <class T>
 void Doubly_linked_list<T>::delete_element(int index) {
 	if (index >= size || index < 0) {
 		std::cout << "Indice fuera de la lista" << std::endl;
+<<<<<<< HEAD
 		return;
 	}
 	if (index == 0) {
@@ -111,6 +117,18 @@ void Doubly_linked_list<T>::delete_element(int index) {
 		delete_last();
 		return;
 	}
+=======
+		return;
+	}
+	if (index == 0) {
+		delete_first();
+		return;
+	}
+	if (index == size - 1) {
+		delete_last();
+		return;
+	}
+>>>>>>> dfaa8c268a6a9fca6c41a57574a08c77633f9672
 	Nodo<T>* tmp = first;
 	Nodo<T>* previus;
 	Nodo<T>* post_previus;
@@ -149,6 +167,7 @@ void Doubly_linked_list<T>::delete_first() {
 template <class T>
 void Doubly_linked_list<T>::delete_last() {
 	if (first == nullptr) {
+<<<<<<< HEAD
 		return;
 	}
 	if (size == 1) {
@@ -156,6 +175,15 @@ void Doubly_linked_list<T>::delete_last() {
 		first = nullptr;
 		return;
 	}
+=======
+		return;
+	}
+	if (size == 1) {
+		free(first);
+		first = nullptr;
+		return;
+	}
+>>>>>>> dfaa8c268a6a9fca6c41a57574a08c77633f9672
 	Nodo<T>* tmp = first;
 	Nodo<T>* last_ = last();
 	while (tmp->get_next()->get_next() != nullptr) {

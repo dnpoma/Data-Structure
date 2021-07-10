@@ -4,6 +4,7 @@
         "Source": "c:\\users\\nicol\\onedrive\\escritorio\\data-structure\\u1\\prueba\\prueba\\main.cpp",
         "ProvidedModule": "",
         "Includes": [
+            "c:\\users\\nicol\\onedrive\\escritorio\\data-structure\\u1\\prueba\\prueba\\menu.h",
             "c:\\users\\nicol\\onedrive\\escritorio\\data-structure\\u1\\prueba\\prueba\\validation.h",
             "c:\\program files (x86)\\microsoft visual studio\\2019\\community\\vc\\tools\\msvc\\14.29.30037\\include\\iostream",
             "c:\\program files (x86)\\microsoft visual studio\\2019\\community\\vc\\tools\\msvc\\14.29.30037\\include\\yvals_core.h",
@@ -109,8 +110,10 @@
             "c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\ucrt\\conio.h",
             "c:\\users\\nicol\\onedrive\\escritorio\\data-structure\\u1\\prueba\\prueba\\doubly_linked_list.h",
             "c:\\users\\nicol\\onedrive\\escritorio\\data-structure\\u1\\prueba\\prueba\\nodo.h",
+            "c:\\users\\nicol\\onedrive\\escritorio\\data-structure\\u1\\prueba\\prueba\\operation.h",
             "c:\\program files (x86)\\microsoft visual studio\\2019\\community\\vc\\tools\\msvc\\14.29.30037\\include\\functional",
-            "c:\\program files (x86)\\microsoft visual studio\\2019\\community\\vc\\tools\\msvc\\14.29.30037\\include\\tuple"
+            "c:\\program files (x86)\\microsoft visual studio\\2019\\community\\vc\\tools\\msvc\\14.29.30037\\include\\tuple",
+            "c:\\users\\nicol\\onedrive\\escritorio\\data-structure\\u1\\prueba\\prueba\\person.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

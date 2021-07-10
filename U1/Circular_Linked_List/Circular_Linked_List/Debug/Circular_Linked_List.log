@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  main.cpp
   Menu.cpp
 C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Circular_Linked_List\Circular_Linked_List\Menu.cpp(13,27): warning C4018: '<': no coinciden signed/unsigned
@@ -5,3 +6,12 @@ C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Circular_Linked_List\Circul
 C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Circular_Linked_List\Circular_Linked_List\Menu.cpp(62,30): warning C4018: '<': no coinciden signed/unsigned
   Generando código...
   Circular_Linked_List.vcxproj -> C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Circular_Linked_List\Debug\Circular_Linked_List.exe
+=======
+﻿  Menu.cpp
+C:\Users\nicol\source\repos\Circular_Linked_List\Circular_Linked_List\Menu.cpp(13,27): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\nicol\source\repos\Circular_Linked_List\Circular_Linked_List\Menu.cpp(10,13): warning C4101: 'index': variable local sin referencia
+C:\Users\nicol\source\repos\Circular_Linked_List\Circular_Linked_List\Menu.cpp(62,30): warning C4018: '<': no coinciden signed/unsigned
+  main.cpp
+  Generando código...
+  Circular_Linked_List.vcxproj -> C:\Users\nicol\source\repos\Circular_Linked_List\Debug\Circular_Linked_List.exe
+>>>>>>> dfaa8c268a6a9fca6c41a57574a08c77633f9672
