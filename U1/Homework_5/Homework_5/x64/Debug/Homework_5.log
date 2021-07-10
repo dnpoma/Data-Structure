@@ -1,5 +1,1 @@
-﻿  main.cpp
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Homework_5\Homework_5\Doubly_linked_list.h(111,5): error C2064: el término no se evalúa como una función con 0 argumentos
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Homework_5\Homework_5\Doubly_linked_list.h(104): message : al compilar la función del miembro clase plantilla "void Doubly_linked_list<int>::delete_last(void)"
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Homework_5\Homework_5\main.cpp(16): message : Vea la referencia a la creación de una instancia de la función plantilla "void Doubly_linked_list<int>::delete_last(void)" que se está compilando
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Homework_5\Homework_5\main.cpp(5): message : Vea la referencia a la creación de una instancia de clase plantilla "Doubly_linked_list<int>" que se está compilando
+﻿

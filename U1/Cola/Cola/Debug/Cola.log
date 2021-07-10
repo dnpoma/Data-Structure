@@ -1,0 +1,6 @@
+﻿  Process.cpp
+  Utils.cpp
+  main.cpp
+  Generando código...
+main.obj : error LNK2019: símbolo externo "public: static float __cdecl Utils::Validation::summation_array<int>(int * const)" (??$summation_array@H@Validation@Utils@@SAMQAH@Z) sin resolver al que se hace referencia en la función _main
+C:\Users\nicol\OneDrive\Escritorio\repositorio-estructuras\II-PARCIAL\Cola\Debug\Cola.exe : fatal error LNK1120: 1 externos sin resolver

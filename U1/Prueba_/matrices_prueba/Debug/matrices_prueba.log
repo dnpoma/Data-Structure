@@ -1,0 +1,11 @@
+﻿  Operation.cpp
+C:\Users\DELL\source\repos\matrices_prueba\matrices_prueba\Operation.cpp(40,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\DELL\source\repos\matrices_prueba\matrices_prueba\Operation.cpp(79,11): warning C4101: 'matrix_identity': variable local sin referencia
+C:\Users\DELL\source\repos\matrices_prueba\matrices_prueba\Operation.cpp(75,10): warning C4101: 'dimension_A': variable local sin referencia
+C:\Users\DELL\source\repos\matrices_prueba\matrices_prueba\Operation.cpp(80,11): warning C4101: 'matrix_C': variable local sin referencia
+C:\Users\DELL\source\repos\matrices_prueba\matrices_prueba\Operation.cpp(76,9): warning C4101: 'dimension': variable local sin referencia
+Menu.obj : error LNK2005: ya se definió "void __cdecl gotoxy(int,int)" (?gotoxy@@YAXHH@Z) en matrix_prueba.obj
+Menu.obj : error LNK2005: ya se definió "int __cdecl menu(char const *,char const * * const,int)" (?menu@@YAHPBDQAPBDH@Z) en matrix_prueba.obj
+Menu.obj : error LNK2005: ya se definió "void __cdecl menu_principal(void)" (?menu_principal@@YAXXZ) en matrix_prueba.obj
+Menu.obj : error LNK2005: ya se definió "class Operation operation" (?operation@@3VOperation@@A) en matrix_prueba.obj
+C:\Users\DELL\source\repos\matrices_prueba\Debug\matrices_prueba.exe : fatal error LNK1169: se encontraron uno o más símbolos definidos simultáneamente

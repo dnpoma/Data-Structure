@@ -1,0 +1,251 @@
+#include "Process.h"
+#include "Utils.h"
+using namespace Utils;
+
+void Process::push() {
+
+}
+
+/**
+* @brief Elimina el primer valor 
+*
+* @param 
+*
+* @return
+*/
+void Process::pop() {
+	client->pop();
+	time_arrival->pop();
+	time_wait->pop();
+	time_notworking->pop();
+	time_service->pop();
+	time_out->pop();
+	time_between->pop();
+}
+
+
+/**
+* @brief Es lo que hace funcionar todas las colas 
+*
+* @param lenght es el numero de clientes a ser atendidos uwu
+*
+* @return 
+*/
+void Process::calculate_all(int lenght) {
+	int time_before = 0;
+	for(int i = 0;  i< lenght; i++)
+	{
+		calculate_client();
+		calculate_time_arrival();
+		calculate_time_wait();
+		calculate_time_notworking();
+		calculate_time_service();
+		calculate_time_out();
+		calculate_time_between(time_before);
+		time_before = time_arrival->get_rear();
+	}
+}
+
+void Process::calculate_client() {
+	size++;
+	client->push(size);
+}
+
+void Process::calculate_time_arrival() {
+	if (size == 1) {
+		time_arrival->push(Utils::Validation::random_numbers(1, 25));
+	}
+	else {
+		int calculate = time_arrival->get_rear() + Utils::Validation::random_numbers(1, 25);
+		time_arrival->push(calculate);
+	}
+}
+
+void Process::calculate_time_wait() {
+	if (size == 1) {
+		time_wait->push(0);
+	}
+	else {
+		int calculate = Utils::Math::max<int>(time_out->get_rear(), time_arrival->get_rear()) - time_arrival->get_rear();
+		time_wait->push(calculate);
+	}
+}
+
+void Process::calculate_time_notworking() {
+	if (size == 1) {
+		time_notworking->push(0);
+	}
+	else {
+		int calculate = Utils::Math::max<int>(time_arrival->get_rear(), time_out->get_rear()) - time_out->get_rear();
+		time_notworking->push(calculate);
+	}
+}
+
+void Process::calculate_time_service() {
+	time_service->push(Utils::Validation::random_numbers(1, 16));
+}
+
+void Process::calculate_time_out() {
+	int calculate = time_arrival->get_rear() + time_wait->get_rear() + time_service->get_rear();
+	time_out->push(calculate);
+}
+
+void Process::calculate_time_between(int arrival_bf) {
+	if (size == 0) {
+		time_between->push(time_arrival->get_rear());
+	}
+	else {
+		int calculate = time_arrival->get_rear() - arrival_bf;
+		time_between->push(calculate);
+	}
+}
+
+/**
+* @brief Imprime todos los promedios de cada una de las colas
+*
+* @param 
+*
+* @return
+*/
+void Process::print_total() {
+	//std::cout << "Size: " << size << std::endl;
+	float _avarage_wait = 0, avarage_notworking = 0, avarage_service = 0, avarage_between = 0;
+	int avarage_wait = 0;
+	time_wait->calculate([&_avarage_wait](int data, int i) {
+		_avarage_wait += data;
+	});
+	std::cout << "TIEMPO DE ESPERA PROMEDIO: " << _avarage_wait / size <<" minutos." << std::endl;
+
+	//Si el tiempo pasa de 60, hacer que se ponga en horas y minutos uwuwuwuwuwu RECUERDA HACER ESTOOOO!!!
+
+	time_notworking->calculate([&avarage_notworking](int data, int i) {
+		avarage_notworking += data;
+	}); 
+	std::cout << "TIEMPO NO TRABAJA EL CAJERO: " << avarage_notworking / size << " minutos." << std::endl;
+
+	time_wait->calculate([&avarage_wait](int data, int i) {
+		if (data > 0) {
+			avarage_wait++;
+		}
+	});
+	std::cout << "NUMERO PROMEDIO DE CLIENTES EN COLA: " << avarage_wait << std::endl;
+
+	time_service->calculate([&avarage_service](int data, int i) {
+		avarage_service += data;
+	});
+	std::cout << "TIEMPO PROMEDIO DE SERVICIO: " << avarage_service / size << std::endl;
+
+	time_between->calculate([&avarage_between](int data, int i) {
+		avarage_between += data;
+	});
+	std::cout << "PROMEDIO DE TIEMPO ENTRE LLEGADAS: " << avarage_between / size << std::endl;
+}
+
+/**
+* @brief Se supone que se van a imprimir todas colas en forma de tabla :)
+*
+* @param
+*
+* @return
+*/
+void Process::print_table(int num) {
+	int* _client = new int[num];
+	int* _time_arrival = new int[num];
+	int* _time_wait = new int[num];
+	int* _time_notworking = new int[num];
+	int* _time_service = new int[num];
+	int* _time_out = new int[num];
+	int*_time_between = new int[num];
+
+	auto function = [&]() {
+		client->calculate([=, &_client](int data, int i = 0) {
+			*(_client + i) = data;
+		});
+
+		time_arrival->calculate([=](int data, int i) {
+			*(_time_arrival + i) = data;
+		});
+
+		time_wait->calculate([=](int data, int i) {
+			*(_time_wait + i) = data;
+		});
+
+		time_notworking->calculate([=](int data, int i) {
+			*(_time_notworking + i) = data;
+		});
+
+		time_service->calculate([=](int data, int i) {
+			*(_time_service + i) = data;
+		});
+
+		time_out->calculate([=](int data, int i) {
+			*(_time_out + i) = data;
+		});
+
+		time_between->calculate([=](int data, int i) {
+			*(_time_between + i) = data;
+		});
+	};
+
+	auto prnt = [=]() {
+		std::cout << "Cliente\tTiempo de llegada\tTiempo de espera\tTiempo no trabaja el cajero\tTiempo de servicio\tTiempo de salida\tTiempo entre llegadas" << std::endl;
+		for (int i = 0; i < num; i++) {
+			std::cout << *(_client + i) <<"\t\t" << *(_time_arrival + i)<<"\t\t"
+				<< *(_time_wait + i) <<"\t\t\t"<< *(_time_notworking + i)<<"\t\t\t"
+				<<*(_time_service + i)<< "\t\t" << *(_time_out + i) <<"\t\t"
+				<< *(_time_between + i) << std::endl;
+		}
+	};
+
+	function();
+	prnt();
+	//std::cout << "A CLIENTE" << std::endl;
+	//client->display();
+
+	//std::cout << "B TIEMPO DE LLEGADA" << std::endl;
+	//time_arrival->display();
+
+	//std::cout << "C TIEMPO DE ESPERA" << std::endl;
+	//time_wait->display();
+
+	//std::cout << "D TIEMPO NO TRABAJA EL CAJERO" << std::endl;
+	//time_notworking->display();
+
+	//std::cout << "E TIEMPO DE SERVICIO" << std::endl;
+	//time_service->display();
+
+	//std::cout << "F TIEMPO DE SALIDA" << std::endl;
+	//time_out->display();
+
+	//std::cout << "G TIEMPO ENTRE LLEGADAS" << std::endl;
+	//time_between->display();
+}
+
+// Getters
+Cola* Process::get_time_client() {
+	return client;
+}
+
+Cola* Process::get_time_arrival() {
+	return time_arrival;
+}
+
+Cola* Process::get_time_wait() {
+	return time_wait;
+}
+
+Cola* Process::get_time_notworking() {
+	return time_notworking;
+}
+
+Cola* Process::get_time_service() {
+	return time_service;
+}
+
+Cola* Process::get_time_out() {
+	return time_out;
+}
+
+Cola* Process::get_time_between() {
+	return time_between;
+}

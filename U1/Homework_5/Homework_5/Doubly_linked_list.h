@@ -35,6 +35,7 @@ void Doubly_linked_list<T>::insert_end(T value){
 	Nodo<T>* last_nodo = last();
 	last_nodo->set_next(new_nodo);
 	new_nodo->set_last(last_nodo);
+	size++;
 }
 
 template <class T>
@@ -48,7 +49,7 @@ void Doubly_linked_list<T>::insert_start(T value) {
 	first->set_last(new_nodo);
 	new_nodo->set_next(first);
 	first = new_nodo;
-	
+	size++;
 }
 
 template <class T>

@@ -1,0 +1,4 @@
+﻿  Order.cpp
+C:\Users\nicol\source\repos\Internal_order\Internal_order\Order.cpp(10,6): warning C4101: 'tmp': variable local sin referencia
+C:\Users\nicol\source\repos\Internal_order\Internal_order\Order.cpp(25,6): warning C4101: 'tmp': variable local sin referencia
+C:\Users\nicol\source\repos\Internal_order\Internal_order\Order.cpp(114): error C4700: se utilizó la variable local 'output' sin inicializar

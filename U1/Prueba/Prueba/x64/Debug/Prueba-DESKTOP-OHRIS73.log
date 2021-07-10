@@ -1,0 +1,36 @@
+﻿  Menu.cpp
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171,1): error C2244: 'Doubly_linked_list<T>::print': no se puede hacer coincidir la definición de función con una declaración existente
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171): message : vea la declaración de 'Doubly_linked_list<T>::print'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171,1): message : definición
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171,1): message : 'void Doubly_linked_list<T>::print(std::function<void(T,T)>)'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171,1): message : declaraciones existentes
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171,1): message : 'void Doubly_linked_list<T>::print(std::function<void (int,int)>)'
+  main.cpp
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171,1): error C2244: 'Doubly_linked_list<T>::print': no se puede hacer coincidir la definición de función con una declaración existente
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171): message : vea la declaración de 'Doubly_linked_list<T>::print'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171,1): message : definición
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171,1): message : 'void Doubly_linked_list<T>::print(std::function<void(T,T)>)'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171,1): message : declaraciones existentes
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(171,1): message : 'void Doubly_linked_list<T>::print(std::function<void (int,int)>)'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(12,2): error C2923: 'Doubly_linked_list': 'person' no es un argumento de tipo de plantilla válido para el parámetro 'T'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(11): message : vea la declaración de 'person'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(12,33): error C2133: 'lst': tamaño desconocido
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(12,30): error C2512: 'Doubly_linked_list': no hay disponible un constructor predeterminado adecuado
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(9,1): message : vea la declaración de 'Doubly_linked_list'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(25,24): error C2662: 'void Doubly_linked_list<T>::insert_end(T)': no se puede convertir el puntero 'this' de 'Doubly_linked_list' a 'Doubly_linked_list<T> &'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(25,24): message : Razón: no se puede realizar la conversión de 'Doubly_linked_list' a 'Doubly_linked_list<T>'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(25,3): message : La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(14,7): message : vea la declaración de 'Doubly_linked_list<T>::insert_end'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(34,25): error C2662: 'void Doubly_linked_list<T>::insert_end(T)': no se puede convertir el puntero 'this' de 'Doubly_linked_list' a 'Doubly_linked_list<T> &'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(34,25): message : Razón: no se puede realizar la conversión de 'Doubly_linked_list' a 'Doubly_linked_list<T>'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(34,4): message : La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(14,7): message : vea la declaración de 'Doubly_linked_list<T>::insert_end'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(38,12): error C2660: 'Doubly_linked_list<T>::print': la función no acepta 0 argumentos
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(13,7): message : vea la declaración de 'Doubly_linked_list<T>::print'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(60,28): error C2662: 'void Doubly_linked_list<T>::modified_change(T)': no se puede convertir el puntero 'this' de 'Doubly_linked_list' a 'Doubly_linked_list<T> &'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(60,28): message : Razón: no se puede realizar la conversión de 'Doubly_linked_list' a 'Doubly_linked_list<T>'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(60,2): message : La conversión requiere un segundo operador de conversión definido por el usuario o constructor
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(22,7): message : vea la declaración de 'Doubly_linked_list<T>::modified_change'
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\main.cpp(96,12): error C2660: 'Doubly_linked_list<T>::print': la función no acepta 0 argumentos
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Prueba\Prueba\Doubly_linked_list.h(13,7): message : vea la declaración de 'Doubly_linked_list<T>::print'
+  Generando código...
