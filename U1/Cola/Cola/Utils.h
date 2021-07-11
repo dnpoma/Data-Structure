@@ -1,3 +1,25 @@
+/*
+* Universidd de las Fuerzas Armadas ESPE
+* Carrera: Ingeniería de Software
+* Autores:
+*
+* Sebastian Alexander Zapata Zapata --- @sebastian771 --- Líder de Equipo
+* Adriana Alejandra Vargas Aldas --- @adrivargas14
+* Christopher Israel Loachamin Simbana --- @ciloachamin
+* Mateo Nicolás Andrade Penafiel --- @MateoNicolasAndrade
+* Dayse Nicole Poma Aguilar --- @dnpoma
+*
+* Enunciado: La Universidad de las Fuerzas Armadas ESPE solicita a los estudinates
+* de tercer nivel de la asignatura estructura de datos automatizar el proceso de
+* ser atendido, donde se especifica el tiempo de llegada que es aleatorio,  el tiempo
+* de espera, el tiempo que no trabaja el cajero el tiempo de servicio y el tiempo de
+* salida.
+*
+* Fecha de creación: 03/07/2021
+* Fecha de modificación: 03/07/2021
+*
+*/
+
 #pragma once
 #include <iostream>
 #include <conio.h>
@@ -5,6 +27,7 @@
 #include <math.h>
 #include <string>
 #include <vector>
+#include <random>
 
 namespace Utils {
 	class Validation
@@ -61,18 +84,17 @@ namespace Utils {
 		//static double sec(double);
 		//static double csc(double);
 
-		
-
-
 		//min max
 		template <typename T>
 		static T max(T, T);
 
 		template <typename T>
 		static T min(T, T);
+
 		//float owo
 		static float avarage(int[]);
 	};
+
 	template<typename T>
 	T Math::max(T num1, T num2) {
 		return (num1 > num2 ? num1 : num2);

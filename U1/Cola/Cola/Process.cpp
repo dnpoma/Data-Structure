@@ -108,20 +108,34 @@ void Process::calculate_time_between(int arrival_bf) {
 * @return
 */
 void Process::print_total() {
+
+	auto time_calculate = [](int time, int limit) {
+		float avarage = time / (float)limit;
+		if (avarage >= 60) {
+
+			printf("%.2f horas. \n", avarage/60);
+		}
+		else {
+			printf("%.2f minutos. \n", avarage);
+		}
+	};
+
 	//std::cout << "Size: " << size << std::endl;
 	float _avarage_wait = 0, avarage_notworking = 0, avarage_service = 0, avarage_between = 0;
 	int avarage_wait = 0;
 	time_wait->calculate([&_avarage_wait](int data, int i) {
 		_avarage_wait += data;
 	});
-	std::cout << "TIEMPO DE ESPERA PROMEDIO: " << _avarage_wait / size <<" minutos." << std::endl;
+	//std::cout << "TIEMPO DE ESPERA PROMEDIO: " << _avarage_wait / size <<" minutos." << std::endl;
+	std::cout << "TIEMPO DE ESPERA PROMEDIO: "; time_calculate(_avarage_wait, size);
 
 	//Si el tiempo pasa de 60, hacer que se ponga en horas y minutos uwuwuwuwuwu RECUERDA HACER ESTOOOO!!!
 
 	time_notworking->calculate([&avarage_notworking](int data, int i) {
 		avarage_notworking += data;
 	}); 
-	std::cout << "TIEMPO NO TRABAJA EL CAJERO: " << avarage_notworking / size << " minutos." << std::endl;
+	//std::cout << "TIEMPO NO TRABAJA EL CAJERO: " << avarage_notworking / size << " minutos." << std::endl;
+	std::cout << "TIEMPO NO TRABAJA EL CAJERO: "; time_calculate(avarage_notworking, size);
 
 	time_wait->calculate([&avarage_wait](int data, int i) {
 		if (data > 0) {
@@ -142,7 +156,7 @@ void Process::print_total() {
 }
 
 /**
-* @brief Se supone que se van a imprimir todas colas en forma de tabla :)
+* @brief Imprimir todas colas en forma de tabla :)
 *
 * @param
 *
@@ -157,7 +171,7 @@ void Process::print_table(int num) {
 	int* _time_out = new int[num];
 	int*_time_between = new int[num];
 
-	auto function = [&]() {
+	auto assignment = [&]() {
 		client->calculate([=, &_client](int data, int i = 0) {
 			*(_client + i) = data;
 		});
@@ -187,65 +201,100 @@ void Process::print_table(int num) {
 		});
 	};
 
-	auto prnt = [=]() {
-		std::cout << "Cliente\tTiempo de llegada\tTiempo de espera\tTiempo no trabaja el cajero\tTiempo de servicio\tTiempo de salida\tTiempo entre llegadas" << std::endl;
+	auto print_tbl = [=]() {
+		printf("+-----+---------------+--------------+------------------+----------------+--------------+----------------------+\n");
+		printf("|%*s|%*s|%*s|%*s|%*s|%*s|%*s|\n",
+		-5, " No.", -10," Tiempo Llegada", -10, " Tiempo Espera", -10, " Tiempo no Trabajo", -10," Tiempo Servicio", -10, " Tiempo Salida",-10, " Tiempo entre Llegadas");
+		//std::cout << "Cliente\tTiempo de llegada\tTiempo de espera\tTiempo no trabaja el cajero\tTiempo de servicio\tTiempo de salida\tTiempo entre llegadas" << std::endl;
+			printf("|-----+---------------+--------------+------------------+----------------+--------------+----------------------|\n");
 		for (int i = 0; i < num; i++) {
-			std::cout << *(_client + i) <<"\t\t" << *(_time_arrival + i)<<"\t\t"
+			printf("|%*d|%*d|%*d|%*d|%*d|%*d|%*d|\n",
+				-5, *(_client + i), -15, *(_time_arrival + i), -14, *(_time_wait + i),-18, *(_time_notworking + i), -16, *(_time_service + i), -14, *(_time_out + i), -22, *(_time_between + i));
+			printf("|-----+---------------+--------------+------------------+----------------+--------------+----------------------|\n");
+			/*	std::cout << *(_client + i) <<"\t\t" << *(_time_arrival + i)<<"\t\t"
 				<< *(_time_wait + i) <<"\t\t\t"<< *(_time_notworking + i)<<"\t\t\t"
 				<<*(_time_service + i)<< "\t\t" << *(_time_out + i) <<"\t\t"
-				<< *(_time_between + i) << std::endl;
+				<< *(_time_between + i) << std::endl;*/
 		}
 	};
 
-	function();
-	prnt();
-	//std::cout << "A CLIENTE" << std::endl;
-	//client->display();
-
-	//std::cout << "B TIEMPO DE LLEGADA" << std::endl;
-	//time_arrival->display();
-
-	//std::cout << "C TIEMPO DE ESPERA" << std::endl;
-	//time_wait->display();
-
-	//std::cout << "D TIEMPO NO TRABAJA EL CAJERO" << std::endl;
-	//time_notworking->display();
-
-	//std::cout << "E TIEMPO DE SERVICIO" << std::endl;
-	//time_service->display();
-
-	//std::cout << "F TIEMPO DE SALIDA" << std::endl;
-	//time_out->display();
-
-	//std::cout << "G TIEMPO ENTRE LLEGADAS" << std::endl;
-	//time_between->display();
+	assignment();
+	print_tbl();
 }
 
-// Getters
+/**
+* @brief Getter time_client
+*
+* @param
+*
+* @return Cola*
+*/
 Cola* Process::get_time_client() {
 	return client;
 }
 
+/**
+* @brief Getter time_arrival
+*
+* @param
+*
+* @return Cola*
+*/
 Cola* Process::get_time_arrival() {
 	return time_arrival;
 }
 
+/**
+* @brief Getter time_wait
+*
+* @param
+*
+* @return Cola*
+*/
 Cola* Process::get_time_wait() {
 	return time_wait;
 }
 
+/**
+* @brief Getter time_notworking
+*
+* @param
+*
+* @return Cola*
+*/
 Cola* Process::get_time_notworking() {
 	return time_notworking;
 }
 
+/**
+* @brief Getter time_service
+*
+* @param
+*
+* @return Cola*
+*/
 Cola* Process::get_time_service() {
 	return time_service;
 }
 
+/**
+* @brief Getter time_out
+*
+* @param
+*
+* @return Cola*
+*/
 Cola* Process::get_time_out() {
 	return time_out;
 }
 
+/**
+* @brief Getter time_between
+*
+* @param
+*
+* @return Cola*
+*/
 Cola* Process::get_time_between() {
 	return time_between;
 }

@@ -63,7 +63,10 @@ int Validation::lenght(int number) {
 }
 
 int Validation::random_numbers(int min, int max) {
-    int random = rand() % (max - min + 1) + min;
+    std::random_device rdm;
+    std::mt19937 mt(rdm());
+    std::uniform_real_distribution<double> motor(min, max);
+    int random = int(motor(mt));
     return random;
 }
 

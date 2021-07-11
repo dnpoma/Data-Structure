@@ -1,21 +1,6 @@
 #include <iostream>
-#include "Process.h"
-
-
-#include "Utils.h"
-#include <string>
-using namespace Utils;
-
-
+#include "Menu.h"
 int main() {
-	/*std::cout << Utils::Validation::summation_array(num)<<std::endl;
-	std::cout << Utils::Validation::lenght_array(num);
-	std::cout <<"hi" << (*(&num + 1) - num);
-	*/
-
-
-	Process process;
-	process.calculate_all(30);
-	process.print_table(30);
-	process.print_total();
+	Menu menu;
+	menu.main_menu();
 }
