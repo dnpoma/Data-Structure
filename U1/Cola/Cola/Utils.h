@@ -66,6 +66,12 @@ namespace Utils {
 
 
 	};
+	class String {
+	public:
+		static char* strcpy(char*, const char*);
+		static char* strcat(char*, const char*);
+		static char* strncpy(char*, const char*, size_t);
+	};
 
 	class Math {
 	public:

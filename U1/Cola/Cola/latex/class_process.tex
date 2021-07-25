@@ -1,0 +1,327 @@
+\hypertarget{class_process}{}\doxysection{Referencia de la Clase Process}
+\label{class_process}\index{Process@{Process}}
+
+
+{\ttfamily \#include $<$Process.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_process_af66ae9769d7f2f673700ab23c45210dd}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Elimina el primer valor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_process_aefcf98be85ef5a3cfaf252cb38dd215e}{calculate\+\_\+all}} (int)
+\begin{DoxyCompactList}\small\item\em Es lo que hace funcionar todas las colas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_process_a07ef4bfcb6d1f435eb2b23750cf3df58}{calculate\+\_\+client}} ()
+\begin{DoxyCompactList}\small\item\em Calcular cliente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_process_abc70aa5739e9e3953ea1891ff93c4b74}{calculate\+\_\+time\+\_\+arrival}} ()
+\begin{DoxyCompactList}\small\item\em Calcular tiempo de llegada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_process_a3c6b4241d214b8f365840a31800847b9}{calculate\+\_\+time\+\_\+wait}} ()
+\begin{DoxyCompactList}\small\item\em Calcular tiempo de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_process_a4b0739d120367be8452d6b29ee62eb37}{calculate\+\_\+time\+\_\+notworking}} ()
+\begin{DoxyCompactList}\small\item\em Calcular tiempo de no trabjo del cajero. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_process_a4924caca16f6c5211d0d54a924f76bcf}{calculate\+\_\+time\+\_\+service}} ()
+\begin{DoxyCompactList}\small\item\em Calcular tiempo de servicio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_process_ac27aa150e91004e4bf2c2db635bf044f}{calculate\+\_\+time\+\_\+out}} ()
+\begin{DoxyCompactList}\small\item\em Calcular tiempo de salida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_process_ae58d87bade7ba0f3e8110f5115d692ae}{calculate\+\_\+time\+\_\+between}} (int)
+\begin{DoxyCompactList}\small\item\em Calcular tiempo de entre llegada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_process_a1a8728a1e962ac3ae71bb77aa8fd45ba}{print\+\_\+total}} ()
+\begin{DoxyCompactList}\small\item\em Imprime todos los promedios de cada una de las colas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_process_a6692fbd6408c295cdbe0412c2d2a9eab}{print\+\_\+table}} (int)
+\begin{DoxyCompactList}\small\item\em Imprimir todas colas en forma de tabla \+:) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ \mbox{\hyperlink{class_process_af6fe5930f67c323655deb7d726dc64b4}{get\+\_\+time\+\_\+client}} ()
+\begin{DoxyCompactList}\small\item\em Getter time\+\_\+client. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ \mbox{\hyperlink{class_process_a6082468aa861a386ebbeecdc2b9fa8e5}{get\+\_\+time\+\_\+arrival}} ()
+\begin{DoxyCompactList}\small\item\em Getter time\+\_\+arrival. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ \mbox{\hyperlink{class_process_a4bf64cf90303e0d922236752a1438bf6}{get\+\_\+time\+\_\+wait}} ()
+\begin{DoxyCompactList}\small\item\em Getter time\+\_\+wait. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ \mbox{\hyperlink{class_process_aaea9707f7fc75208d564b0e61cebedea}{get\+\_\+time\+\_\+notworking}} ()
+\begin{DoxyCompactList}\small\item\em Getter time\+\_\+notworking. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ \mbox{\hyperlink{class_process_ad27158a9b0eb12a6c113f5d97bc71285}{get\+\_\+time\+\_\+service}} ()
+\begin{DoxyCompactList}\small\item\em Getter time\+\_\+service. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ \mbox{\hyperlink{class_process_aa4d0bc2084f64e9ecf1f58a2158129e5}{get\+\_\+time\+\_\+out}} ()
+\begin{DoxyCompactList}\small\item\em Getter time\+\_\+out. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ \mbox{\hyperlink{class_process_af32f181a1e7ea12976b91d4d6421b683}{get\+\_\+time\+\_\+between}} ()
+\begin{DoxyCompactList}\small\item\em Getter time\+\_\+between. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_process_aefcf98be85ef5a3cfaf252cb38dd215e}\label{class_process_aefcf98be85ef5a3cfaf252cb38dd215e}} 
+\index{Process@{Process}!calculate\_all@{calculate\_all}}
+\index{calculate\_all@{calculate\_all}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{calculate\_all()}{calculate\_all()}}
+{\footnotesize\ttfamily void Process\+::calculate\+\_\+all (\begin{DoxyParamCaption}\item[{int}]{lenght }\end{DoxyParamCaption})}
+
+
+
+Es lo que hace funcionar todas las colas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em lenght} & es el numero de clientes a ser atendidos uwu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_process_a07ef4bfcb6d1f435eb2b23750cf3df58}\label{class_process_a07ef4bfcb6d1f435eb2b23750cf3df58}} 
+\index{Process@{Process}!calculate\_client@{calculate\_client}}
+\index{calculate\_client@{calculate\_client}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{calculate\_client()}{calculate\_client()}}
+{\footnotesize\ttfamily void Process\+::calculate\+\_\+client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcular cliente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_abc70aa5739e9e3953ea1891ff93c4b74}\label{class_process_abc70aa5739e9e3953ea1891ff93c4b74}} 
+\index{Process@{Process}!calculate\_time\_arrival@{calculate\_time\_arrival}}
+\index{calculate\_time\_arrival@{calculate\_time\_arrival}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{calculate\_time\_arrival()}{calculate\_time\_arrival()}}
+{\footnotesize\ttfamily void Process\+::calculate\+\_\+time\+\_\+arrival (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcular tiempo de llegada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_ae58d87bade7ba0f3e8110f5115d692ae}\label{class_process_ae58d87bade7ba0f3e8110f5115d692ae}} 
+\index{Process@{Process}!calculate\_time\_between@{calculate\_time\_between}}
+\index{calculate\_time\_between@{calculate\_time\_between}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{calculate\_time\_between()}{calculate\_time\_between()}}
+{\footnotesize\ttfamily void Process\+::calculate\+\_\+time\+\_\+between (\begin{DoxyParamCaption}\item[{int}]{arrival\+\_\+bf }\end{DoxyParamCaption})}
+
+
+
+Calcular tiempo de entre llegada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_a4b0739d120367be8452d6b29ee62eb37}\label{class_process_a4b0739d120367be8452d6b29ee62eb37}} 
+\index{Process@{Process}!calculate\_time\_notworking@{calculate\_time\_notworking}}
+\index{calculate\_time\_notworking@{calculate\_time\_notworking}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{calculate\_time\_notworking()}{calculate\_time\_notworking()}}
+{\footnotesize\ttfamily void Process\+::calculate\+\_\+time\+\_\+notworking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcular tiempo de no trabjo del cajero. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_ac27aa150e91004e4bf2c2db635bf044f}\label{class_process_ac27aa150e91004e4bf2c2db635bf044f}} 
+\index{Process@{Process}!calculate\_time\_out@{calculate\_time\_out}}
+\index{calculate\_time\_out@{calculate\_time\_out}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{calculate\_time\_out()}{calculate\_time\_out()}}
+{\footnotesize\ttfamily void Process\+::calculate\+\_\+time\+\_\+out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcular tiempo de salida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_a4924caca16f6c5211d0d54a924f76bcf}\label{class_process_a4924caca16f6c5211d0d54a924f76bcf}} 
+\index{Process@{Process}!calculate\_time\_service@{calculate\_time\_service}}
+\index{calculate\_time\_service@{calculate\_time\_service}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{calculate\_time\_service()}{calculate\_time\_service()}}
+{\footnotesize\ttfamily void Process\+::calculate\+\_\+time\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcular tiempo de servicio. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_a3c6b4241d214b8f365840a31800847b9}\label{class_process_a3c6b4241d214b8f365840a31800847b9}} 
+\index{Process@{Process}!calculate\_time\_wait@{calculate\_time\_wait}}
+\index{calculate\_time\_wait@{calculate\_time\_wait}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{calculate\_time\_wait()}{calculate\_time\_wait()}}
+{\footnotesize\ttfamily void Process\+::calculate\+\_\+time\+\_\+wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcular tiempo de espera. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_a6082468aa861a386ebbeecdc2b9fa8e5}\label{class_process_a6082468aa861a386ebbeecdc2b9fa8e5}} 
+\index{Process@{Process}!get\_time\_arrival@{get\_time\_arrival}}
+\index{get\_time\_arrival@{get\_time\_arrival}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{get\_time\_arrival()}{get\_time\_arrival()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ Process\+::get\+\_\+time\+\_\+arrival (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter time\+\_\+arrival. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_af32f181a1e7ea12976b91d4d6421b683}\label{class_process_af32f181a1e7ea12976b91d4d6421b683}} 
+\index{Process@{Process}!get\_time\_between@{get\_time\_between}}
+\index{get\_time\_between@{get\_time\_between}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{get\_time\_between()}{get\_time\_between()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ Process\+::get\+\_\+time\+\_\+between (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter time\+\_\+between. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_af6fe5930f67c323655deb7d726dc64b4}\label{class_process_af6fe5930f67c323655deb7d726dc64b4}} 
+\index{Process@{Process}!get\_time\_client@{get\_time\_client}}
+\index{get\_time\_client@{get\_time\_client}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{get\_time\_client()}{get\_time\_client()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ Process\+::get\+\_\+time\+\_\+client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter time\+\_\+client. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_aaea9707f7fc75208d564b0e61cebedea}\label{class_process_aaea9707f7fc75208d564b0e61cebedea}} 
+\index{Process@{Process}!get\_time\_notworking@{get\_time\_notworking}}
+\index{get\_time\_notworking@{get\_time\_notworking}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{get\_time\_notworking()}{get\_time\_notworking()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ Process\+::get\+\_\+time\+\_\+notworking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter time\+\_\+notworking. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_aa4d0bc2084f64e9ecf1f58a2158129e5}\label{class_process_aa4d0bc2084f64e9ecf1f58a2158129e5}} 
+\index{Process@{Process}!get\_time\_out@{get\_time\_out}}
+\index{get\_time\_out@{get\_time\_out}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{get\_time\_out()}{get\_time\_out()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ Process\+::get\+\_\+time\+\_\+out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter time\+\_\+out. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_ad27158a9b0eb12a6c113f5d97bc71285}\label{class_process_ad27158a9b0eb12a6c113f5d97bc71285}} 
+\index{Process@{Process}!get\_time\_service@{get\_time\_service}}
+\index{get\_time\_service@{get\_time\_service}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{get\_time\_service()}{get\_time\_service()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ Process\+::get\+\_\+time\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter time\+\_\+service. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_a4bf64cf90303e0d922236752a1438bf6}\label{class_process_a4bf64cf90303e0d922236752a1438bf6}} 
+\index{Process@{Process}!get\_time\_wait@{get\_time\_wait}}
+\index{get\_time\_wait@{get\_time\_wait}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{get\_time\_wait()}{get\_time\_wait()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_queues}{Queues}}$<$ int $>$ $\ast$ Process\+::get\+\_\+time\+\_\+wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter time\+\_\+wait. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_af66ae9769d7f2f673700ab23c45210dd}\label{class_process_af66ae9769d7f2f673700ab23c45210dd}} 
+\index{Process@{Process}!pop@{pop}}
+\index{pop@{pop}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void Process\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Elimina el primer valor. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_a6692fbd6408c295cdbe0412c2d2a9eab}\label{class_process_a6692fbd6408c295cdbe0412c2d2a9eab}} 
+\index{Process@{Process}!print\_table@{print\_table}}
+\index{print\_table@{print\_table}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{print\_table()}{print\_table()}}
+{\footnotesize\ttfamily void Process\+::print\+\_\+table (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Imprimir todas colas en forma de tabla \+:) 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_process_a1a8728a1e962ac3ae71bb77aa8fd45ba}\label{class_process_a1a8728a1e962ac3ae71bb77aa8fd45ba}} 
+\index{Process@{Process}!print\_total@{print\_total}}
+\index{print\_total@{print\_total}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{print\_total()}{print\_total()}}
+{\footnotesize\ttfamily void Process\+::print\+\_\+total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime todos los promedios de cada una de las colas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+Cola/\mbox{\hyperlink{_process_8h}{Process.\+h}}\item 
+Cola/\mbox{\hyperlink{_process_8cpp}{Process.\+cpp}}\end{DoxyCompactItemize}

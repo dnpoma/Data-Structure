@@ -2,16 +2,9 @@
 #include "Utils.h"
 using namespace Utils;
 
-void Process::push() {
-
-}
-
-/**
-* @brief Elimina el primer valor 
-*
-* @param 
-*
-* @return
+/* 
+* @brief pop
+* 
 */
 void Process::pop() {
 	client->pop();
@@ -23,13 +16,9 @@ void Process::pop() {
 	time_between->pop();
 }
 
-
-/**
-* @brief Es lo que hace funcionar todas las colas 
-*
-* @param lenght es el numero de clientes a ser atendidos uwu
-*
-* @return 
+/* 
+* @brief calculate_all
+* @param int lenght
 */
 void Process::calculate_all(int lenght) {
 	int time_before = 0;
@@ -46,11 +35,19 @@ void Process::calculate_all(int lenght) {
 	}
 }
 
+/* 
+* @brief calculate_client
+* 
+*/
 void Process::calculate_client() {
 	size++;
 	client->push(size);
 }
 
+/* 
+* @brief calculate_time_arrival
+* 
+*/
 void Process::calculate_time_arrival() {
 	if (size == 1) {
 		time_arrival->push(Utils::Validation::random_numbers(1, 25));
@@ -61,6 +58,10 @@ void Process::calculate_time_arrival() {
 	}
 }
 
+/* 
+* @brief calculate_time_wait
+* 
+*/
 void Process::calculate_time_wait() {
 	if (size == 1) {
 		time_wait->push(0);
@@ -71,6 +72,10 @@ void Process::calculate_time_wait() {
 	}
 }
 
+/* 
+* @brief calculate_time_notworking
+* 
+*/
 void Process::calculate_time_notworking() {
 	if (size == 1) {
 		time_notworking->push(0);
@@ -81,15 +86,25 @@ void Process::calculate_time_notworking() {
 	}
 }
 
+/* 
+* @brief calculate_time_service()
+* 
+*/
 void Process::calculate_time_service() {
 	time_service->push(Utils::Validation::random_numbers(1, 16));
 }
-
+/* 
+* @brief calculate_time_out()
+* 
+*/
 void Process::calculate_time_out() {
 	int calculate = time_arrival->get_rear() + time_wait->get_rear() + time_service->get_rear();
 	time_out->push(calculate);
 }
-
+/* 
+* @brief calculate_time_between
+* @param int arrival_bf
+*/
 void Process::calculate_time_between(int arrival_bf) {
 	if (size == 0) {
 		time_between->push(time_arrival->get_rear());
@@ -99,16 +114,12 @@ void Process::calculate_time_between(int arrival_bf) {
 		time_between->push(calculate);
 	}
 }
-
-/**
-* @brief Imprime todos los promedios de cada una de las colas
-*
-* @param 
-*
-* @return
+/* 
+* @brief print_total()
+* 
 */
-void Process::print_total() {
 
+void Process::print_total() {
 	auto time_calculate = [](int time, int limit) {
 		float avarage = time / (float)limit;
 		if (avarage >= 60) {
@@ -155,13 +166,11 @@ void Process::print_total() {
 	std::cout << "PROMEDIO DE TIEMPO ENTRE LLEGADAS: " << avarage_between / size << std::endl;
 }
 
-/**
-* @brief Imprimir todas colas en forma de tabla :)
-*
-* @param
-*
-* @return
+/* 
+* @brief print_table
+* @param int num
 */
+
 void Process::print_table(int num) {
 	int* _client = new int[num];
 	int* _time_arrival = new int[num];
@@ -222,79 +231,37 @@ void Process::print_table(int num) {
 	print_tbl();
 }
 
-/**
-* @brief Getter time_client
-*
-* @param
-*
-* @return Cola*
-*/
-Cola* Process::get_time_client() {
+
+Queues<int>* Process::get_time_client() {
 	return client;
 }
 
-/**
-* @brief Getter time_arrival
-*
-* @param
-*
-* @return Cola*
-*/
-Cola* Process::get_time_arrival() {
+
+Queues<int>* Process::get_time_arrival() {
 	return time_arrival;
 }
 
-/**
-* @brief Getter time_wait
-*
-* @param
-*
-* @return Cola*
-*/
-Cola* Process::get_time_wait() {
+
+Queues<int>* Process::get_time_wait() {
 	return time_wait;
 }
 
-/**
-* @brief Getter time_notworking
-*
-* @param
-*
-* @return Cola*
-*/
-Cola* Process::get_time_notworking() {
+
+Queues<int>* Process::get_time_notworking() {
 	return time_notworking;
 }
 
-/**
-* @brief Getter time_service
-*
-* @param
-*
-* @return Cola*
-*/
-Cola* Process::get_time_service() {
+
+Queues<int>* Process::get_time_service() {
 	return time_service;
 }
 
-/**
-* @brief Getter time_out
-*
-* @param
-*
-* @return Cola*
-*/
-Cola* Process::get_time_out() {
+
+Queues<int>* Process::get_time_out() {
 	return time_out;
 }
 
-/**
-* @brief Getter time_between
-*
-* @param
-*
-* @return Cola*
-*/
-Cola* Process::get_time_between() {
+
+Queues<int>* Process::get_time_between() {
 	return time_between;
 }

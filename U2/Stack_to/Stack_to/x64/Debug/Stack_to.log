@@ -1,4 +1,2 @@
-﻿  Operation.cpp
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U2\Stack_to\Stack_to\Operation.cpp(94,5): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U2\Stack_to\Stack_to\Operation.cpp(119,53): error C2296: '%': no es válido; el operando izquierdo es de tipo 'double'
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U2\Stack_to\Stack_to\Operation.cpp(119,53): error C2297: '%': no es válido; el operando derecho es de tipo 'double'
+﻿  Stack_to.cpp
+  Stack_to.vcxproj -> C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U2\Stack_to\x64\Debug\Stack_to.exe

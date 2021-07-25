@@ -149,9 +149,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cola.h" />
+    <ClInclude Include="Marquee.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="Process.h" />
+    <ClInclude Include="Queues.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>

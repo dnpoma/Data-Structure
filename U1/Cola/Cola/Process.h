@@ -22,43 +22,193 @@
 
 
 #pragma once
-#include "Cola.h"
+//#include "Cola.h"
+#include "Queues.h"
 #include "Utils.h"
 using namespace Utils;
 
 class Process
 {
 private:
-	Cola* client = new Cola;
+	Queues<int>* client = new Queues<int>;
+	Queues<int>* time_wait = new Queues<int>;
+	Queues<int>* time_arrival = new Queues<int>;
+	Queues<int>* time_notworking = new Queues<int>;
+	Queues<int>* time_service = new Queues<int>;
+	Queues<int>* time_out = new Queues<int>;
+	Queues<int>* time_between = new Queues<int>;
+	/*Cola* client = new Cola;
 	Cola* time_arrival = new Cola;
 	Cola* time_wait = new Cola;
 	Cola* time_notworking = new Cola;
 	Cola* time_service = new Cola;
 	Cola* time_out = new Cola;
-	Cola* time_between = new Cola;
+	Cola* time_between = new Cola;*/
 
 	int size = 0;
 public:
-	void push();
+
+	/**
+	* @brief Elimina el primer valor
+	*
+	* @param
+	*
+	* @return
+	*/
 	void pop();
+
+
+	/**
+	* @brief Es lo que hace funcionar todas las colas
+	*
+	* @param lenght es el numero de clientes a ser atendidos uwu
+	*
+	* @return
+	*/
 	void calculate_all(int);
+
+	/**
+	* @brief Calcular cliente
+	*
+	* @param 
+	*
+	* @return
+	*/
 	void calculate_client();
+
+	/**
+	* @brief Calcular tiempo de llegada
+	*
+	* @param
+	*
+	* @return
+	*/
 	void calculate_time_arrival();
+
+	/**
+	* @brief Calcular tiempo de espera
+	*
+	* @param
+	*
+	* @return
+	*/
 	void calculate_time_wait();
+
+	/**
+	* @brief Calcular tiempo de no trabjo del cajero
+	*
+	* @param
+	*
+	* @return
+	*/
 	void calculate_time_notworking();
+
+	/**
+	* @brief Calcular tiempo de servicio
+	*
+	* @param
+	*
+	* @return
+	*/
 	void calculate_time_service();
+
+	/**
+	* @brief Calcular tiempo de salida
+	*
+	* @param
+	*
+	* @return
+	*/
 	void calculate_time_out();
+
+	/**
+	* @brief Calcular tiempo de entre llegada 
+	*
+	* @param
+	*
+	* @return
+	*/
 	void calculate_time_between(int);
+
+	/**
+	* @brief Imprime todos los promedios de cada una de las colas
+	*
+	* @param
+	*
+	* @return
+	*/
 	void print_total();
+
+	/**
+	* @brief Imprimir todas colas en forma de tabla :)
+	*
+	* @param
+	*
+	* @return
+	*/
 	void print_table(int);
 
+	/**
+	* @brief Getter time_client
+	*
+	* @param
+	*
+	* @return Cola*
+	*/
+	Queues<int>* get_time_client();
 
-	Cola* get_time_client();
-	Cola* get_time_arrival();
-	Cola* get_time_wait();
-	Cola* get_time_notworking();
-	Cola* get_time_service();
-	Cola* get_time_out();
-	Cola* get_time_between();
+	/**
+	* @brief Getter time_arrival
+	*
+	* @param
+	*
+	* @return Cola*
+	*/
+	Queues<int>* get_time_arrival();
+
+	/**
+	* @brief Getter time_wait
+	*
+	* @param
+	*
+	* @return Cola*
+	*/
+	Queues<int>* get_time_wait();
+
+	/**
+	* @brief Getter time_notworking
+	*
+	* @param
+	*
+	* @return Cola*
+	*/
+	Queues<int>* get_time_notworking();
+
+	/**
+	* @brief Getter time_service
+	*
+	* @param
+	*
+	* @return Cola*
+	*/
+	Queues<int>* get_time_service();
+
+	/**
+	* @brief Getter time_out
+	*
+	* @param
+	*
+	* @return Cola*
+	*/
+	Queues<int>* get_time_out();
+
+	/**
+	* @brief Getter time_between
+	*
+	* @param
+	*
+	* @return Cola*
+	*/
+	Queues<int>* get_time_between();
 };
 

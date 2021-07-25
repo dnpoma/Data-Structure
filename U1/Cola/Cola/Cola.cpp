@@ -1,24 +1,47 @@
 #include <iostream>
 #include "Cola.h"
 
+/**
+ * @brief Cola constructor
+ * 
+ */
 Cola::Cola() {
 	this->front = nullptr;
 	this->rear = nullptr;
 }
+
+/**
+ * @brief Cola Destructor
+ * 
+ */
 Cola::~Cola() {}
 
 int Cola::get_front() {
 	return front->get_data();
 }
 
+/**
+ * @brief get_rear
+ * 
+ */
 int Cola::get_rear() {
 	return rear->get_data();
 }
 
+/**
+ * @brief empty
+ * @return front y rear
+ * 
+ */
 bool Cola::empty() {
 	return(this->front == nullptr && this->rear == nullptr);
 }
 
+/**
+ * @brief push
+ * @param data 
+ * 
+ */
 void Cola::push(int data) {
 	Nodo* new_nodo = new Nodo(data);
 	if (empty()) {
@@ -30,6 +53,10 @@ void Cola::push(int data) {
 	}
 }
 
+/**
+ * @brief display
+ * 
+ */
 void Cola::display() {
 	Nodo* tmp;
 	if (empty()) {
@@ -44,6 +71,10 @@ void Cola::display() {
 	}
 }
 
+/**
+ * @brief pop
+ * 
+ */
 void Cola::pop() {
 	Nodo* tmp = this->front;
 	if (!empty()) {
@@ -52,7 +83,11 @@ void Cola::pop() {
 	}
 }
 
-
+/**
+ * @brief calculate
+ * @param function y callback
+ */
+ 
 void Cola::calculate(std::function<void(int, int)>callback) {
 	Nodo* tmp = this->front;
 	int i = 0;
@@ -62,6 +97,10 @@ void Cola::calculate(std::function<void(int, int)>callback) {
 	}
 }
 
+/**
+ * @brief avarage
+ * @return plus/i
+ */
 
 float Cola::avarage() {
 	Nodo* tmp;

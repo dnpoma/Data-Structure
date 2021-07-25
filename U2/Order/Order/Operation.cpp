@@ -9,7 +9,7 @@ void Operation::swap(int& x, int& y) {
 
 
 
-void Operation::generate_elements(Vector* vector, int size) {
+void Operation::generate_elements(Vector<int>* vector, int size) {
 	vector->set_vector(new int[size]);
 	//generate random number 
 	std::random_device rdm;
@@ -22,19 +22,19 @@ void Operation::generate_elements(Vector* vector, int size) {
 	}
 }
 
-void Operation::print(Vector* vector, int size) {
+void Operation::print(Vector<int>* vector, int size) {
 	for (int i = 0; i < size; i++) {
 		std::cout << *(vector->get_vector() + i) << std::endl;
 	}
 }
 
-void Operation::print(Vector* vector,int size, std::function<void(int, int)>callback) {
-	for (int i = 0; i < size; i++) {
-		std::cout << *(vector->get_vector() + i) << std::endl;
-	}
-}
+//void Operation::print(Vector<int>* vector,int size, std::function<void(int, int)>callback) {
+//	for (int i = 0; i < size; i++) {
+//		std::cout << *(vector->get_vector() + i) << std::endl;
+//	}
+//}
 
-void Operation::exchange_order(Vector* vector, int size) {
+void Operation::exchange_order(Vector<int>* vector, int size) {
 	int tmp;
 	//int size = sizeof(list);
 	for (int i = 0; i < size - 1; i++) {
@@ -50,7 +50,7 @@ void Operation::exchange_order(Vector* vector, int size) {
 }
 
 
-void Operation::bubble_order(Vector* vector, int size) {
+void Operation::bubble_order(Vector<int>* vector, int size) {
 	int tmp = 0;
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size - 1; j++) {
@@ -65,7 +65,7 @@ void Operation::bubble_order(Vector* vector, int size) {
 	}
 }
 
-void Operation::shellsort_order(Vector* vector, int size) {
+void Operation::shellsort_order(Vector<int>* vector, int size) {
 	//int size = sizeof(list);
 	int jump = size / 2;
 	while (jump > 0) {

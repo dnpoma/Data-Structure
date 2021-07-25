@@ -1,12 +1,13 @@
 ﻿  Cola.cpp
+  main.cpp
   Menu.cpp
+  Nodo.cpp
   Process.cpp
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Cola\Cola\Process.cpp(130,61): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Cola\Cola\Process.cpp(138,63): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\nicol\OneDrive\Escritorio\repositor-structures\II-PARCIAL\Extras_explicacion\Cola\Cola\Process.cpp(141,61): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\nicol\OneDrive\Escritorio\repositor-structures\II-PARCIAL\Extras_explicacion\Cola\Cola\Process.cpp(149,63): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
   Screen.cpp
   Utils.cpp
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Cola\Cola\Utils.cpp(79,13): warning C4244: 'inicializando': conversión de '__int64' a 'int'; posible pérdida de datos
-  main.cpp
+C:\Users\nicol\OneDrive\Escritorio\repositor-structures\II-PARCIAL\Extras_explicacion\Cola\Cola\Utils.cpp(110,13): warning C4244: 'inicializando': conversión de '__int64' a 'int'; posible pérdida de datos
   Generando código...
-C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Cola\Cola\Cola.cpp(82): warning C4715: 'Cola::avarage': no todas las rutas de acceso de control devuelven un valor
-  Cola.vcxproj -> C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U1\Cola\x64\Debug\Cola.exe
+C:\Users\nicol\OneDrive\Escritorio\repositor-structures\II-PARCIAL\Extras_explicacion\Cola\Cola\Cola.cpp(121): warning C4715: 'Cola::avarage': no todas las rutas de acceso de control devuelven un valor
+  Cola.vcxproj -> C:\Users\nicol\OneDrive\Escritorio\repositor-structures\II-PARCIAL\Extras_explicacion\Cola\x64\Debug\Cola.exe

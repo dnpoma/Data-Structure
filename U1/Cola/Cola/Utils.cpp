@@ -1,14 +1,23 @@
 #include "Utils.h"
 using namespace Utils;
 
-// ---------------- numbers o.o
 
-// Comprueba que un char sea un numero
+/* 
+* @brief isNumericChar (Comprueba que un char sea un numero)
+* @param char x
+* @return true or false
+*/
+
 bool Validation::isNumericChar(char x)
 {
     return (x >= '0' && x <= '9') ? true : false;
 }
 
+/* 
+* @brief atoi 
+* @param char str
+* @return sign * res
+*/
 // "8547"
 //  return 8547
 //  de string a number
@@ -38,6 +47,11 @@ int Validation::atoi(char* str) {
     return sign * res;
 }
 
+/* 
+* @brief data_expand
+* @param int value, int* data
+* @return data
+*/
 //  De un valor 123456
 // retorna una cadena de datos enteros
 int* Validation::data_expand(int value, int* data) {
@@ -51,7 +65,12 @@ int* Validation::data_expand(int value, int* data) {
 }
 
 
-//Para saber la longitud de un numero 500 = 3
+/* 
+* @brief lenght (Para saber la longitud de un numero 500 = 3)
+* @param int number
+* @return contador
+*/
+
 int Validation::lenght(int number) {
     int contador = 1;
     while (number / 10 > 0)
@@ -62,6 +81,12 @@ int Validation::lenght(int number) {
     return contador;
 }
 
+/* 
+* @brief random_numbers
+* @param int min, int max
+* @return random
+*/
+
 int Validation::random_numbers(int min, int max) {
     std::random_device rdm;
     std::mt19937 mt(rdm());
@@ -69,6 +94,12 @@ int Validation::random_numbers(int min, int max) {
     int random = int(motor(mt));
     return random;
 }
+
+/* 
+* @brief lenght_array
+* @param int* array
+* @return len
+*/
 
 int Validation::lenght_array(int* array) {
     //int count = 0;
@@ -80,7 +111,12 @@ int Validation::lenght_array(int* array) {
     return len;
 }
 
-// sumatoria de un array
+/* 
+* @brief summation_array (sumatoria de un array)
+* @param int* array
+* @return sum
+*/
+
 int Validation::summation_array(int* array) {
    int sum = 0;
     for (int i = 0; *(array+i) != '\0'; i++) {
@@ -106,7 +142,12 @@ int Validation::summation_array(int* array) {
 
 //char name[]="Hiii";
 //Utils::Validation::lenght_char(name); 
-// retorna 4
+
+/* 
+* @brief lenght_char (retorna 4)
+* @param char* str
+* @return count
+*/
 int Validation::lenght_char(char* str) {
     int count = 0;
     while (*str != '\0') {
@@ -118,7 +159,13 @@ int Validation::lenght_char(char* str) {
 
 // Longitud de un string "hola uwu" = 8
 // Utils::Validation::lenght_str("daiai")
-// retorna 5
+
+
+/* 
+* @brief lenght_char (retorna 5)
+* @param string str
+* @return count
+*/
 int Validation::lenght_str(std::string str) {
     int count = 0;
     for (int i = 0; str[i] != '\0'; i++) {
@@ -129,6 +176,14 @@ int Validation::lenght_str(std::string str) {
 
 //   std::string name[2];
 //   std::string* array_name = lower_separate(persona->get_name(), name);
+
+/* 
+* @brief split
+* @param information
+* @param array_name
+* @param delimiter
+* @return array_name
+*/
 std::string* Validation::split(std::string information, std::string array_name[2], std::string delimiter) {
     information += " ";
     information = lower(information);
@@ -146,7 +201,12 @@ std::string* Validation::split(std::string information, std::string array_name[2
     return array_name;
 }
 
-//String a convertir en mayuscula
+/* 
+* @brief upper (String a convertir en mayuscula)
+* @param string str
+* @return str
+*/
+
 std::string Validation::upper(std::string str) {
     for (int i = 0; str[i] != '\0'; i++)
     {
@@ -157,7 +217,12 @@ std::string Validation::upper(std::string str) {
     return str;
 }
 
-// String a convertir en minuscula
+/* 
+* @brief lower(String a convertir en minuscula)
+* @param string str
+* @return str
+*/
+
 std::string Validation::lower(std::string str) {
 
     for (int i = 0; str[i] != '\0'; i++)
@@ -333,6 +398,55 @@ int Validation::comprobation_values(int limit1, int limit2, int value) {
     return number;
 }
 
+// ------------- String
+
+
+char* String::strcpy(char* destination, const char* source)
+{
+    if (destination == NULL) {
+        return NULL;
+    }
+
+    char* ptr = destination;
+
+    while (*source != '\0')
+    {
+        *destination = *source;
+        destination++;
+        source++;
+    }
+    *destination = '\0';
+    return ptr;
+}
+
+char* String::strcat(char* destination, const char* value)
+{
+    char* p = destination;
+
+    while (*p != '\0') ++p;
+
+    while (*p++ = *value++);
+
+    return destination;
+}
+
+char* String::strncpy(char* destination, const char* source, size_t num)
+{
+    if (destination == NULL) {
+        return NULL;
+    }
+    char* ptr = destination;
+
+    while (*source && num--)
+    {
+        *destination = *source;
+        destination++;
+        source++;
+    }
+
+    *destination = '\0';
+    return ptr;
+}
 
 // ------------- Math
 double Math::factorial(double factorial)
