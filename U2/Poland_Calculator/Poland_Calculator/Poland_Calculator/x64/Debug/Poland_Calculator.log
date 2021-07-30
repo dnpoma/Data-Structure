@@ -1,0 +1,6 @@
+﻿  Operation.cpp
+C:\Users\nicol\Downloads\Poland_Calculator\Poland_Calculator\Poland_Calculator\Operation.cpp(386,14): warning C4101: 'str': variable local sin referencia
+C:\Users\nicol\Downloads\Poland_Calculator\Poland_Calculator\Poland_Calculator\Operation.cpp(653,14): warning C4101: 'str': variable local sin referencia
+C:\Users\nicol\Downloads\Poland_Calculator\Poland_Calculator\Poland_Calculator\Operation.cpp(309): warning C4715: 'Operation::calculate': no todas las rutas de acceso de control devuelven un valor
+C:\Users\nicol\Downloads\Poland_Calculator\Poland_Calculator\Poland_Calculator\Nodo.h(69): warning C4715: 'Nodo<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::get_dato': no todas las rutas de acceso de control devuelven un valor
+  Poland_Calculator.vcxproj -> C:\Users\nicol\Downloads\Poland_Calculator\Poland_Calculator\x64\Debug\Poland_Calculator.exe

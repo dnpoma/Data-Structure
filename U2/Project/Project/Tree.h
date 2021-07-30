@@ -3,6 +3,8 @@
 #include "Node.h"
 #include "Stack.h"
 #include <functional>
+#include "File.h"
+
 using namespace Utils;
 
 class Tree {
@@ -30,4 +32,5 @@ public:
     Node* search(std::string);
     void print(std::function<void(Node*)> callback);
     void print();
+    File fl;
 };

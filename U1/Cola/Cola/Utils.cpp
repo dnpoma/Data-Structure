@@ -449,16 +449,103 @@ char* String::strncpy(char* destination, const char* source, size_t num)
 }
 
 // ------------- Math
-double Math::factorial(double factorial)
-{
-    int f = 1;
-    for (int i = 1; i <= factorial; i++)
-    {
-        f = f * i;
+static double factorial(int n) {
+    if (n < 1) {
+        return 1;
     }
-    return f;
+    else {
+        return n * factorial(n - 1);
+    }
+}
+static double pow(double num, int pot) {
+    double result = 1;
+    if (pot == 0) {
+        return 1;
+    }
+    if (pot == 1) {
+        return num;
+    }
+    if (pot == 0.5) {
+        double raiz = 0;
+        while ((num - raiz * raiz) > 0.00001) {
+            raiz = raiz + 0.00001;
+        }
+
+        return raiz;
+    }
+    for (int i = 0; i < pot; i++) {
+        result = result * num;
+    }
+    return result;
 }
 
+//Funciones trigonométricas
+double Math::sin(double angle) {
+    double x = angle;
+    double result, precission;
+    result = 0;
+    precission = 0;
+    int sign = 0, final_sign;
+    final_sign = 0;
+    const double pi = 3.141592654;
+    while (x > pi) {
+        x = x - pi;
+        final_sign = final_sign + 1;
+    }
+    for (int i = 1; i <= 11; i = i + 2) {
+        precission = pow(-1, sign) * (pow(x, i) / factorial(i));
+
+        result = result + precission;
+        sign = sign + 1;
+
+    }
+    if (final_sign % 2 != 0) {
+        result = result * -1;
+    }
+    return result;
+}
+
+double Math::cos(double angle) {
+    double result = 0;
+    int presicion = 8;
+    const double pi = 3.141592654;
+    int cont = 0;
+    while (angle > pi) {
+        angle = angle - pi;
+        cont++;
+
+    }
+    for (int i = 0; i < presicion; i++)
+    {
+        result += ((pow(-1, i)) / factorial(2 * i)) * pow(angle, 2 * i);
+    }
+    if (cont % 2 == 1) {
+        result = result * -1;
+    }
+    return result;
+}
+
+double Math::tan(double angle) {
+    double tan;
+    tan = sin(angle) / cos(angle);
+    return tan;
+}
+
+double Math::cot(double angle) {
+    double cot;
+    cot = 1 / tan(angle);
+    return cot;
+}
+double Math::sec(double angle) {
+    double sec;
+    sec = 1 / sin(angle);
+    return sec;
+}
+double Math::csc(double angle) {
+    double cos;
+    cos = 1 / sin(angle);
+    return cos;
+}
 
 double Math::pow(double base, int exponent) {
     double temp;

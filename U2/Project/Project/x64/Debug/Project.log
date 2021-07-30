@@ -1,2 +1,6 @@
-﻿  Tree.cpp
-  Project.vcxproj -> C:\Users\nicol\source\repos\Project\x64\Debug\Project.exe
+﻿  main.cpp
+  Tree.cpp
+  Generando código...
+Tree.obj : error LNK2005: ya se definió "public: void __cdecl File::add_word(int,class Node *)" (?add_word@File@@QEAAXHPEAVNode@@@Z) en main.obj
+Tree.obj : error LNK2005: ya se definió "public: void __cdecl File::write_js(class nlohmann::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> > > &,class Node *)" (?write_js@File@@QEAAXAEAV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@@nlohmann@@PEAVNode@@@Z) en main.obj
+C:\Users\nicol\OneDrive\Escritorio\Data-Structure\U2\Project\x64\Debug\Project.exe : fatal error LNK1169: se encontraron uno o más símbolos definidos simultáneamente

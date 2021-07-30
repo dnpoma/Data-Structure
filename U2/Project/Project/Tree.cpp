@@ -4,6 +4,8 @@ void Tree::push(std::string _spa, std::string _eng) {
     _spa = Utils::Validation::upper(_spa);
     _eng = Utils::Validation::upper(_eng);
     tmp = insert(tmp, _spa, _eng);
+    fl.add_word(1, tmp);
+
 }
 
 int Tree::find_height(Node* node) {
@@ -157,7 +159,7 @@ Node* Tree::search(std::string data) {
     data = Utils::Validation::upper(data);
     print([&data, &node](Node* temp){
         if (data == temp->get_english() || data == temp->get_spain()) {
-           //std::cout<<"Word: "<< data << " English: " << temp->get_english() << " Spain: " << temp->get_spain() <<std::endl;
+           std::cout<<"Word: "<< data << " English: " << temp->get_english() << " Spain: " << temp->get_spain() <<std::endl;
             node = temp;
         }
     });

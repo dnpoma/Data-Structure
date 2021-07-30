@@ -83,12 +83,12 @@ namespace Utils {
 		static double sqrt(float);
 
 		//Funciones trigonométricas
-		//static double sin(double);
-		//static double cos(double);
-		//static double tan(double);
-		//static double cot(double);
-		//static double sec(double);
-		//static double csc(double);
+		static double sin(double);
+		static double cos(double);
+		static double tan(double);
+		static double cot(double);
+		static double sec(double);
+		static double csc(double);
 
 		//min max
 		template <typename T>
